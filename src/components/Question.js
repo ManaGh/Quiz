@@ -3,12 +3,11 @@ import Answer from "./Answer";
 import { QuizContext } from "../context/quiz";
 const Question = ({ questions }) => {
   const [quizState] = useContext(QuizContext);
-  console.log("Question", quizState);
+  const currentQuestion =
+    quizState.questions[quizState.currentQuestionIndex];
   return (
     <div>
-      <div className="question">
-        {quizState.questions[quizState.currentQuestionIndex].question}
-      </div>
+      <div className="question">{currentQuestion.question}</div>
       <div className="answers">
         <Answer />
         <Answer />
