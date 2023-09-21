@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Answer from "./Answer";
+import { QuizContext } from "../context/quiz";
 const Question = ({ questions }) => {
-  console.log("Question", questions);
+  const [quizState] = useContext(QuizContext);
+  console.log("Question", quizState);
   return (
     <div>
       <div className="question">Question</div>
