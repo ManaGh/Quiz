@@ -6,7 +6,7 @@ const initialState = {
   currentQuestionIndex: 0,
   questions,
 };
-const reducer = (state, action) => {
+const reducer = (state, action) => { 
   if (action.type === "Next_Question") {
     return {
       ...state,

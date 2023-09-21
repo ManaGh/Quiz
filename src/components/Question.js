@@ -6,7 +6,9 @@ const Question = ({ questions }) => {
   console.log("Question", quizState);
   return (
     <div>
-      <div className="question">Question</div>
+      <div className="question">
+        {quizState.questions[quizState.currentQuestionIndex].question}
+      </div>
       <div className="answers">
         <Answer />
         <Answer />
